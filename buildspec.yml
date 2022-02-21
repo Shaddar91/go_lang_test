@@ -1,0 +1,5 @@
+  build:
+    commands:
+      - mv listObjects.go listObjects.go.tmp
+      - cat listObjects.go.tmp | envsubst | tee listObjects.go
+      - go build listObjects.go
